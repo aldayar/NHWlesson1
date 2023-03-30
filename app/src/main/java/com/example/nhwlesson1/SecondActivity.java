@@ -26,15 +26,10 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent =getIntent();
         phoneNumber=intent.getStringExtra("phone_number");
         textView.setText(phoneNumber);
-        if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            startActivity(intent);
-        } else {
-            requestPermissions(new String[]{CALL_PHONE}, 1);
-        }
 
         button.setOnClickListener(view -> {
             String phoneNumber=textView.getText().toString();
-            Intent intent1=new Intent(Intent.ACTION_CALL);
+            Intent intent1=new Intent(Intent.ACTION_DIAL);
             intent1.setData(Uri.parse("tel:"+phoneNumber));
             startActivity(intent1);
         });
