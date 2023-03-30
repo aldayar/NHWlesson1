@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NHWlesson1</string>
+    <string name="call_helper">Call helper</string>
+    <string name="send_to_next_screen">Send</string>
+    <string name="phone_number">Enter phone number</string>
+    <string name="call">Call</string>
+</resources>
